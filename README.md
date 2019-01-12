@@ -10,11 +10,11 @@ https://github.com/eleutherius/fbsd-desktop/blob/master/LICENSE)
 
 FBSD-Desktop - it is bash script for install X-server for you! 
 
-### Future plans to add functionality
+### Roadmap
 
 - [x]  Firewall setup
-- [ ]  
-- [ ]  
+- [ ]  Make stable installation 
+- [ ]  Fix GitHub script 
 
 
 ### Gnome-Shell 
