@@ -1,11 +1,5 @@
-#!#!/usr/local/bin/bash
-#pkg install -y git bash sudo vim-console nano 
-
-#
-# edd new user
-#/bin/bash
-# 
 #!/usr/local/bin/bash
+
 set -e
 #Load config file
 
@@ -78,8 +72,9 @@ function show_calendar(){
 #
 
 function gnome_shell(){
-system_optimization
-system_check
+	system_check
+	system_optimization
+	gnome_v3
 }
 
 while true
