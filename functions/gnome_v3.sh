@@ -8,6 +8,11 @@ sysrc gdm_enable="YES"
 echo  -n "Enable Gnome3"
 echo " ................OK"
 
+
+echo -n "Add procfs to fstab"
+echo "tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0" >> /etc/fstab 
+echo " ................OK"
+
 echo "$MY_USER    ALL=(ALL:ALL) ALL" >> /usr/local/etc/sudoers
 chsh -s /usr/local/bin/bash "$MY_USER"
 

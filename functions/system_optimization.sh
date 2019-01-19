@@ -109,7 +109,7 @@ echo " ................OK"
 
 sysrc devfs_system_ruleset="devfsrules_common"
 sysrc polkit_enable="YES"
-sysrc kld_list="fuse ext2fs cuse"
+sysrc kld_list="fuse ext2fs cuse i915kms"
 echo -n "Sendmail turn off"
 echo " ................OK"
 
@@ -124,7 +124,7 @@ sysrc linux_enable="YES"
 sysrc hald_enable="YES"
 sysrc dbus_enable="YES"
 
-echo -n "Add procfs to fstab"
-echo "tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0" >> /etc/fstab 
+echo -n "Mount from user"
+echo "vfs.usermount=1" >> /etc/sysctl.conf
 echo " ................OK"
 }
