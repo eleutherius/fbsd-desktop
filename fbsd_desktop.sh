@@ -74,7 +74,14 @@ function show_calendar(){
 function gnome_shell(){
 	system_check
 	system_optimization
+	xorg_config
 	gnome_v3
+}
+
+function xorg_only(){
+	system_check
+	system_optimization
+	xorg_config
 }
 
 while true
@@ -86,7 +93,8 @@ dialog --clear  --help-button --backtitle "Available for FreeBSD 12/13" \
 --menu "You can use the UP/DOWN arrow keys, the first \n\
 letter of the choice as a hot key, or the \n\
 number keys 1-9 to choose an option.\n\
-Choose the TASK" 15 50 2 \
+Choose the TASK" 15 50 3 \
+"Xorg" "Install only Xorg" \
 "Install Gnome3" "Install gnome-shell" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
@@ -95,7 +103,7 @@ menuitem=$(<"${INPUT}")
 
 # make decision
 case $menuitem in
-	#"Github ssh key") github_key;;
+	"Install only Xorg") xorg_only;;
 	"Install gnome-shell") gnome_shell;;
 	"Exit") echo "Bye"; break;;
 esac
