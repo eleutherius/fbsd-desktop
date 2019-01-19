@@ -1,4 +1,4 @@
-[ [en](../README.md) | ru]
+[ [en](../README.md) | ru ]
 
 
 [![BSD license](https://img.shields.io/pypi/l/flask.svg)](

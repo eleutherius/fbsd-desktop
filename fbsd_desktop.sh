@@ -103,8 +103,8 @@ menuitem=$(<"${INPUT}")
 
 # make decision
 case $menuitem in
-	"Install only Xorg") xorg_only;;
-	"Install gnome-shell") gnome_shell;;
+	"Xorg") xorg_only;;
+	"Install Gnome3") gnome_shell;;
 	"Exit") echo "Bye"; break;;
 esac
 
