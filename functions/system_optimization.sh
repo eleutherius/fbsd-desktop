@@ -30,11 +30,10 @@ echo " ................OK"
 # Stylish logo when loading
 #loader_logo="beastie"
 
-
+echo -n "Kernel Tuning at Boot"
 echo "kern.ipc.shmseg=1024" >> /boot/loader.conf
 echo "kern.ipc.shmmni=1024" >> /boot/loader.conf
 echo "kern.maxproc=100000" >> /boot/loader.conf
-echo -n "Kernel Tuning at Boot"
 echo " ................OK"
 
 
