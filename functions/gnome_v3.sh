@@ -13,11 +13,6 @@ echo -n "Add procfs to fstab"
 echo "tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0" >> /etc/fstab 
 echo " ................OK"
 
-echo "$USER    ALL=(ALL:ALL) ALL" >> /usr/local/etc/sudoers
-chsh -s /usr/local/bin/bash "$USER"
-
-pw usermod "$USER" -G wheel
-pw usermod "$USER" -G operator
 
 while true; do
     read -p "Do you wish to reboot this system? [Y/N]:" yn
@@ -30,3 +25,5 @@ done
 
 
 }
+
+password:2bkhn2ZPVk3ZGFL
