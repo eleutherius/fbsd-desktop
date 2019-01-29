@@ -1,9 +1,23 @@
 #!/usr/local/bin/bash
 
 set -e
-#Load config file
+
+############################################################ LOAD CONFIG FILE
 
 source ./config.cfg
+
+############################################################ GLOBALS
+
+#
+# Version information
+#
+FBS_DESKTOP_VERSION="0.1 January-29, 2019"
+
+#
+# Options
+#
+SUCCESS=0
+FAILURE=1
 
 # Store menu options selected by the user
 
@@ -16,6 +30,8 @@ OUTPUT=/tmp/output.sh.$$
 # trap and delete temp files
 
 trap "rm $OUTPUT; rm $INPUT; exit" SIGHUP SIGINT SIGTERM
+
+############################################################ FUNCTIONS
 
 # Import Functions
 
@@ -114,3 +130,9 @@ done
 # if temp files found, delete em
 [ -f $OUTPUT ] && rm $OUTPUT
 [ -f $INPUT ] && rm $INPUT
+
+exit $status # $SUCCESS unless error occurred with either `-c' or `-x'
+
+################################################################################
+# END
+################################################################################
