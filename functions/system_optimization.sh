@@ -3,6 +3,7 @@ function system_optimization () {
 #
 # format script 
 #
+
 pkg install -y git bash sudo vim-console nano git fusefs-ext4fuse fusefs-ntfs automount xorg
 
 
@@ -25,8 +26,6 @@ echo -n "Shared memory for Chromium"
 echo "kern.ipc.shm_allow_removed=1" >> /boot/loader.conf
 echo " ................OK"
 
-
-
 # Stylish logo when loading
 #loader_logo="beastie"
 
@@ -36,38 +35,31 @@ echo "kern.ipc.shmmni=1024" >> /boot/loader.conf
 echo "kern.maxproc=100000" >> /boot/loader.conf
 echo " ................OK"
 
-
 sysrc mmc_load="YES"
 sysrc mmcsd_load="YES"
 sysrc sdhci_load="YES"
 echo -n "MMC / SD card reader support"
 echo " ................OK"
 
-
 sysrc fuse_load="YES"
 echo -n "User space file system"
 echo " ................OK"
-
 
 sysrc coretemp_load="YES"
 echo -n "Intel Temperature Sensors"
 echo " ................OK"
 
-
 sysrc amdtemp_load="YES"
 echo -n "AMD Temperature Sensors"
 echo " ................OK"
-
 
 sysrc tmpfs_load="YES"
 echo -n "TMPFS"
 echo " ................OK"
 
-
 sysrc aio_load="YES"
 echo -n "Asynchronous I/O support"
 echo " ................OK"
-
 
 sysrc libiconv_load="YES"
 sysrc libmchain_load="YES"
@@ -76,24 +68,20 @@ sysrc msdosfs_iconv_load="YES"
 echo -n "Unicode support fvor portable devices"
 echo " ................OK"
 
-
 sysrc powerd_enable="YES"
 sysrc powerd_flags="-a hiadaptive -b adaptive"
 echo -n "Power Management and Energy Saving"
 echo " ................OK"
-
 
 sysrc csecd_enable="YES"
 sysrc sdpd_enable="YES"
 echo -n "Turn on BlueTooth"
 echo " ................OK"
 
-
 sysrc ntpd_enable="YES"
 sysrc ntpd_flags="-g"
 echo -n "Synchronize date and time"
 echo " ................OK"
-
 
 # Uncomment to disable common services (more memory)
 #cron_enable="NO"
@@ -106,13 +94,11 @@ sysrc sendmail_msp_queue_enable="NO"
 echo -n "Sendmail turn off"
 echo " ................OK"
 
-
 sysrc devfs_system_ruleset="devfsrules_common"
 sysrc polkit_enable="YES"
 sysrc kld_list="fuse ext2fs cuse i915kms"
 echo -n "Sendmail turn off"
 echo " ................OK"
-
 
 sysrc firewall_enable="YES"
 sysrc firewall_type="workstation"

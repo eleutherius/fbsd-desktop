@@ -64,4 +64,7 @@ sysrc kld_list="fuse ext2fs cuse"
 sudo pkg install automount -y 
 
 
-cat >  /etc/devfs.rules <<EOF /usr/local/etc/automount.conf
+cat >  /etc/devfs.rules <<EOF 
+/usr/local/etc/automount.conf
+EOF
+}

@@ -11,6 +11,7 @@ source ./config.cfg
 #
 # Version information
 #
+
 FBS_DESKTOP_VERSION="0.1 January-29, 2019"
 
 #
@@ -69,20 +70,7 @@ function display_output(){
 	local t=${3-Output} 	# box title 
 	dialog --backtitle "ARMBSD Kitchen" --title "${t}" --clear --msgbox "$(<$OUTPUT)" ${h} ${w}
 }
-#
-# Purpose - display current system date & time
-#
-function show_date(){
-	echo "Today is $(date) @ $(hostname -f)." >$OUTPUT
-    display_output 6 60 "Date and Time"
-}
-#
-# Purpose - display a calendar
-#
-function show_calendar(){
-	cal >$OUTPUT
-	display_output 13 25 "Calendar"
-}
+
 #
 # set infinite loop
 #
@@ -109,9 +97,10 @@ dialog --clear  --help-button --backtitle "Available for FreeBSD 12/13" \
 --menu "You can use the UP/DOWN arrow keys, the first \n\
 letter of the choice as a hot key, or the \n\
 number keys 1-9 to choose an option.\n\
-Choose the TASK" 15 50 3 \
+Choose the TASK" 15 50 4 \
 "Xorg" "Install only Xorg" \
 "Install Gnome3" "Install gnome-shell" \
+"RMOVE ALL" "Remove all pakages" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
 menuitem=$(<"${INPUT}")
@@ -121,6 +110,7 @@ menuitem=$(<"${INPUT}")
 case $menuitem in
 	"Xorg") xorg_only;;
 	"Install Gnome3") gnome_shell;;
+	"RMOVE ALL") remove_all;;
 	"Exit") echo "Bye"; break;;
 esac
 
