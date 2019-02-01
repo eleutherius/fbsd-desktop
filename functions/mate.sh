@@ -1,3 +1,3 @@
 function system_check() {
-	pkg  install x11/mate -y 
+	pkg  install -y x11/mate  
 }

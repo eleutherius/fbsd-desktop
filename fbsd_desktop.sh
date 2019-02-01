@@ -20,6 +20,8 @@ FBS_DESKTOP_VERSION="0.1 January-29, 2019"
 SUCCESS=0
 FAILURE=1
 
+LOGS=./log.txt
+
 # Store menu options selected by the user
 
 INPUT=/tmp/menu.sh.$$

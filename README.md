@@ -28,10 +28,14 @@ https://github.com/eleutherius/fbsd-desktop/blob/master/doc/gnome.png)
 ### Installation
 
 ```
-% sudo pkg install bash git
+% sudo pkg install -y bash git
+```
+add   ```Username_of_your_user   ALL=(ALL) ALL``` to the ```/usr/local/etc/sudoers```
+
+```
 % git clone https://github.com/eleutherius/fbsd-desktop
 % cd fbsd-desktop
-% sudo bash fbsd-desktop.sh
+% sudo bash fbsd_desktop.sh
 ```
 
 [![Screen](https://github.com/eleutherius/fbsd-desktop/blob/master/doc/screen.png)](
@@ -40,6 +44,8 @@ https://github.com/eleutherius/fbsd-desktop/blob/master/doc/screen.png)
 ### Contributing
 
 1. You can fork this repository and add your changes
+
+echo "$USER ALL=(ALL) ALL" >>  /usr/local/etc/sudoers
 
 
 
