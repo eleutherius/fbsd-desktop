@@ -44,8 +44,3 @@ https://github.com/eleutherius/fbsd-desktop/blob/master/doc/screen.png)
 ### Contributing
 
 1. You can fork this repository and add your changes
-
-echo "$USER ALL=(ALL) ALL" >>  /usr/local/etc/sudoers
-
-
-
