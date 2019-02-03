@@ -8,7 +8,7 @@ https://github.com/eleutherius/fbsd-desktop/blob/master/LICENSE)
 
 ###  About FBSD-Desktop
 
-FBSD-Desktop - it is bash script for install X-server for you!
+FBSD-Desktop - it's installer graphical environment for FreeBSD!
 
 ### Roadmap
 
